@@ -112,11 +112,8 @@ import { Card, CardImg, CardText, CardBody,
 
 
         <div className="row">
-
           <RenderDish dish={props.dish} />
-
           <RenderComments comments={props.comments} />
-
         </div>
 
       </div>
