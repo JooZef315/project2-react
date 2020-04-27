@@ -13,6 +13,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
     constructor(props) {
       super(props);
       this.toggleModal = this.toggleModal.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
       this.state = {
         isModalOpen: false
       };
@@ -24,8 +25,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
 
     handleSubmit(values) {
       this.toggleModal();
-      console.log('Current State is: ' + JSON.stringify(values));
-      alert('Current State is: ' + JSON.stringify(values));
+      this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
@@ -48,14 +48,14 @@ const minLength = (len) => (val) => val && (val.length >= len);
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="firstname" md={4}>First Name</Label>
+                <Label htmlFor="author" md={4}>First Name</Label>
                 <Col md={12}>
-                  <Control.text model=".firstname" id="firstname" name="firstname"
-                    placeholder="First Name"
+                  <Control.text model=".author" id="author" name="author"
+                    placeholder="author"
                     className="form-control"
                     validators={{
                       required, minLength: minLength(3), maxLength: maxLength(15)}}/>
-                  <Errors className="text-danger" model=".firstname"
+                  <Errors className="text-danger" model=".author"
                     show="touched"
                     messages={{ required: 'Required',
                       minLength: 'Must be greater than 2 characters',
@@ -63,14 +63,14 @@ const minLength = (len) => (val) => val && (val.length >= len);
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="message" md={6}>Your Feedback</Label>
+                <Label htmlFor="comment" md={6}>Your Feedback</Label>
                 <Col md={12}>
-                  <Control.textarea model=".message" id="message" name="message"
+                  <Control.textarea model=".comment" id="comment" name="comment"
                     rows="6" className="form-control" />
                 </Col>
               </Row>
               <Row className="form-group">
-                <Col md={{size:10, offset: 2}}>
+                <Col md={{size:10}}>
                   <Button type="submit" color="primary">
                     submit
                   </Button>
@@ -86,7 +86,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
   }
 
 
-  function RenderComments({comments}){
+  function RenderComments({comments, addComment, dishId}){
     if(comments != null)
     return(
       <div className="col-12 col-md-5 m-1">
@@ -107,7 +107,10 @@ const minLength = (len) => (val) => val && (val.length >= len);
             })}
           </ul>
         </Card>
-        <CommentForm />
+        <div>
+          <CommentForm dishId={dishId} addComment={addComment}/>
+       </div>
+
       </div>
     );
     else {
@@ -159,7 +162,9 @@ const minLength = (len) => (val) => val && (val.length >= len);
           </div>
           <div className="row">
             <RenderDish dish={props.dish} />
-            <RenderComments comments={props.comments} />
+            <RenderComments comments={props.comments}
+              addComment={props.addComment}
+              dishId={props.dish.id} />
           </div>
         </div>
       );
