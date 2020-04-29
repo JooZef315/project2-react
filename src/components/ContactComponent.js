@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem,
   Button, Label, Col, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Control, Form, Errors, actions } from 'react-redux-form';
+import { Control, Form, Errors} from 'react-redux-form';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -12,13 +12,11 @@ const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val
 
 
   class Contact extends Component {
-    constructor(props) {
-      super(props);
-    }
 
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.props.postFeedback(values.firstname, values.lastname, values.telnum, values.email, values.contactType, values.message);
+        // console.log('Current State is: ' + JSON.stringify(values));
+        // alert('Current State is: ' + JSON.stringify(values));
         this.props.resetFeedbackForm();
         // event.preventDefault();
     }
@@ -52,18 +50,18 @@ const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val
               <i className="fa fa-fax"></i>: +852 8765 4321<br />
               <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
-        </div>
-        <div className="col-12 col-sm-6 offset-sm-1">
-          <h5>Map of our Location</h5>
-        </div>
-        <div className="col-12 col-sm-11 offset-sm-1">
-          <div className="btn-group" role="group">
-            <a role="button" className="btn btn-primary" href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
-            <a role="button" className="btn btn-info"><i className="fa fa-skype"></i> Skype</a>
-            <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i> Email</a>
+              </div>
+              <div className="col-12 col-sm-6 offset-sm-1">
+                <h5>Map of our Location</h5>
+              </div>
+              <div className="col-12 col-sm-11 offset-sm-1">
+                <div className="btn-group" role="group">
+                  <a role="button" className="btn btn-primary" href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
+                  <a role="button" className="btn btn-info"><i className="fa fa-skype"></i> Skype</a>
+                  <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i> Email</a>
+                </div>
+              </div>
           </div>
-        </div>
-    </div>
 
     <div className="row row-content">
       <div className="col-12">
@@ -128,8 +126,17 @@ const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val
             </Col>
           </Row>
           <Row className="form-group">
-            <Label htmlFor="contactType" md={8}>contact Type</Label>
-            <Col md={4}>
+            <Col  md={2}>
+              <Label htmlFor="contactType">
+                contact Type
+              </Label>
+            </Col>
+            <Col  md={8}>
+              <strong>May we contact you?  </strong>
+              <Control.checkbox model=".agree"
+                name="agree" id="agree" />
+            </Col>
+            <Col md={2}>
               <Control.select model=".contactType" id="contactType" placeholder="contact Type" className="form-control">
                 <option>E-mail</option>
                 <option>TEL.</option>
