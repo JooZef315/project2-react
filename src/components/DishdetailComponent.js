@@ -82,7 +82,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
             </LocalForm>
           </ModalBody>
         </Modal>
-        <Button outline onClick={this.toggleModal}><span className="fa fa-pencil fa-lg"></span>submit comment</Button>
+        <Button outline className="text-primary" onClick={this.toggleModal}><span className="fa fa-pencil fa-lg"></span>submit comment</Button>
       </div>
       );
     }
@@ -94,7 +94,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
     return(
       <div className="col-12 col-md-5 m-1">
         <Card>
-          <h4>comments</h4>
+          <h4 className="text-secondary">comments</h4>
           <ul >
             <Stagger in>
               {comments.map((comment) => {
@@ -131,7 +131,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
             <Card>
               <CardImg top src={baseUrl + dish.image} alt={dish.name} />
               <CardBody>
-                <CardTitle>
+                <CardTitle className="dish">
                   {dish.name}
                 </CardTitle>
                 <CardText>
@@ -165,7 +165,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
       }
       else if (props.dish != null) {
         return (
-          <div className="container">
+          <div className="container body">
             <div className="row">
               <Breadcrumb>
                 <BreadcrumbItem>

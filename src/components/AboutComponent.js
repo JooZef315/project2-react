@@ -1,24 +1,34 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBody, CardTitle, CardHeader, Media } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, CardImg, CardText, CardTitle, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import {Fade, Stagger } from 'react-animation-components';
 
 function RenderLeader({leader}) {
   return(
     <li>
-        <Media tag="li">
-          <Media title left middle>
-              <Media object src={baseUrl +  leader.image} alt={leader.name} />
-          </Media >
-          <Media body className="ml-5">
-            <Media heading>{leader.name}</Media>
-            <h6>{leader.designation}</h6>
-            <p>{leader.description}</p>
+      <div className="row">
+        <div className="col-12 col-sm-3 d-flex">
+          <Media left middle>
+            <Media object src={baseUrl +  leader.image} alt={leader.name} />
           </Media>
-        </Media>
-      </li>
+        </div>
+        <div className="col-12 col-sm-9">
+          <Card>
+            <CardBody>
+              <CardTitle >
+                <h3 className="text-primary">{leader.name}</h3>
+              </CardTitle>
+              <CardText>
+                <h5 className="text-secondary">{leader.designation}</h5>
+                <p>{leader.description}</p>
+              </CardText>
+            </CardBody>
+          </Card>
+        </div>
+      </div>
+    </li>
   );
 }
 
@@ -52,7 +62,7 @@ function About(props) {
     }
     else {
       return(
-        <div className="container">
+        <div className="container body">
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
@@ -106,7 +116,7 @@ function About(props) {
                     <h2>Corporate Leadership</h2>
                 </div>
                 <div className="col-12">
-                  <ul>
+                  <ul className="ul">
                       <Stagger in>
                         <Fade in>
                           {leaders}

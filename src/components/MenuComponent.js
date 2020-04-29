@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay,
+import { Card, CardBody, CardImg, CardImgOverlay,
     CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { Loading } from './LoadingComponent';
@@ -12,9 +12,9 @@ import { baseUrl } from '../shared/baseUrl';
               <Link to={`/menu/${dish.id}`} >
                   <CardImg width="100%"
                     src={baseUrl + dish.image} alt={dish.name} />
-                  <CardImgOverlay>
-                      <CardTitle>{dish.name}</CardTitle>
-                  </CardImgOverlay>
+                    <CardBody>
+                      <CardTitle className="dish">{dish.name}</CardTitle>
+                  </CardBody>
               </Link>
             </Card>
         );
@@ -50,7 +50,7 @@ import { baseUrl } from '../shared/baseUrl';
         }
         else {
           return (
-            <div className="container">
+            <div className="container body">
                 <div className="row">
                     <Breadcrumb>
                         <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
