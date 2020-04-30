@@ -35,7 +35,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
       return(
       <div>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-          <ModalHeader toggle={this.toggleModal} >Rate us!</ModalHeader>
+          <ModalHeader className="mod" toggle={this.toggleModal} >Rate us!</ModalHeader>
           <ModalBody>
             <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
               <Row className="form-group">
