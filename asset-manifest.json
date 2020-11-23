@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.29327c19.chunk.css",
-    "main.js": "/static/js/main.e1874947.chunk.js",
-    "main.js.map": "/static/js/main.e1874947.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e05b0089.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e05b0089.js.map",
-    "static/css/2.44298d54.chunk.css": "/static/css/2.44298d54.chunk.css",
-    "static/js/2.80989a56.chunk.js": "/static/js/2.80989a56.chunk.js",
-    "static/js/2.80989a56.chunk.js.map": "/static/js/2.80989a56.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.7869b6769a3dc024f785c59bd9cc8e4a.js": "/precache-manifest.7869b6769a3dc024f785c59bd9cc8e4a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.44298d54.chunk.css.map": "/static/css/2.44298d54.chunk.css.map",
-    "static/css/main.29327c19.chunk.css.map": "/static/css/main.29327c19.chunk.css.map",
-    "static/js/2.80989a56.chunk.js.LICENSE.txt": "/static/js/2.80989a56.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.css": "/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/Fusion-Restaurant/static/css/main.29327c19.chunk.css",
+    "main.js": "/Fusion-Restaurant/static/js/main.42c0d07f.chunk.js",
+    "main.js.map": "/Fusion-Restaurant/static/js/main.42c0d07f.chunk.js.map",
+    "runtime-main.js": "/Fusion-Restaurant/static/js/runtime-main.759daebf.js",
+    "runtime-main.js.map": "/Fusion-Restaurant/static/js/runtime-main.759daebf.js.map",
+    "static/css/2.afdaea60.chunk.css": "/Fusion-Restaurant/static/css/2.afdaea60.chunk.css",
+    "static/js/2.80989a56.chunk.js": "/Fusion-Restaurant/static/js/2.80989a56.chunk.js",
+    "static/js/2.80989a56.chunk.js.map": "/Fusion-Restaurant/static/js/2.80989a56.chunk.js.map",
+    "index.html": "/Fusion-Restaurant/index.html",
+    "precache-manifest.ac37462d7aaf50ae2b3de75349288bb5.js": "/Fusion-Restaurant/precache-manifest.ac37462d7aaf50ae2b3de75349288bb5.js",
+    "service-worker.js": "/Fusion-Restaurant/service-worker.js",
+    "static/css/2.afdaea60.chunk.css.map": "/Fusion-Restaurant/static/css/2.afdaea60.chunk.css.map",
+    "static/css/main.29327c19.chunk.css.map": "/Fusion-Restaurant/static/css/main.29327c19.chunk.css.map",
+    "static/js/2.80989a56.chunk.js.LICENSE.txt": "/Fusion-Restaurant/static/js/2.80989a56.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/Fusion-Restaurant/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.e05b0089.js",
-    "static/css/2.44298d54.chunk.css",
+    "static/js/runtime-main.759daebf.js",
+    "static/css/2.afdaea60.chunk.css",
     "static/js/2.80989a56.chunk.js",
     "static/css/main.29327c19.chunk.css",
-    "static/js/main.e1874947.chunk.js"
+    "static/js/main.42c0d07f.chunk.js"
   ]
 }
