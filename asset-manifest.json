@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Fusion-Restaurant/static/css/main.29327c19.chunk.css",
-    "main.js": "/Fusion-Restaurant/static/js/main.42c0d07f.chunk.js",
-    "main.js.map": "/Fusion-Restaurant/static/js/main.42c0d07f.chunk.js.map",
+    "main.js": "/Fusion-Restaurant/static/js/main.f5d7a5d9.chunk.js",
+    "main.js.map": "/Fusion-Restaurant/static/js/main.f5d7a5d9.chunk.js.map",
     "runtime-main.js": "/Fusion-Restaurant/static/js/runtime-main.759daebf.js",
     "runtime-main.js.map": "/Fusion-Restaurant/static/js/runtime-main.759daebf.js.map",
     "static/css/2.afdaea60.chunk.css": "/Fusion-Restaurant/static/css/2.afdaea60.chunk.css",
     "static/js/2.80989a56.chunk.js": "/Fusion-Restaurant/static/js/2.80989a56.chunk.js",
     "static/js/2.80989a56.chunk.js.map": "/Fusion-Restaurant/static/js/2.80989a56.chunk.js.map",
     "index.html": "/Fusion-Restaurant/index.html",
-    "precache-manifest.ac37462d7aaf50ae2b3de75349288bb5.js": "/Fusion-Restaurant/precache-manifest.ac37462d7aaf50ae2b3de75349288bb5.js",
+    "precache-manifest.172316f9e2164e8374d9c0f80cf1f716.js": "/Fusion-Restaurant/precache-manifest.172316f9e2164e8374d9c0f80cf1f716.js",
     "service-worker.js": "/Fusion-Restaurant/service-worker.js",
     "static/css/2.afdaea60.chunk.css.map": "/Fusion-Restaurant/static/css/2.afdaea60.chunk.css.map",
     "static/css/main.29327c19.chunk.css.map": "/Fusion-Restaurant/static/css/main.29327c19.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.afdaea60.chunk.css",
     "static/js/2.80989a56.chunk.js",
     "static/css/main.29327c19.chunk.css",
-    "static/js/main.42c0d07f.chunk.js"
+    "static/js/main.f5d7a5d9.chunk.js"
   ]
 }
