@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Fusion-Restaurant/precache-manifest.172316f9e2164e8374d9c0f80cf1f716.js"
+  "/Fusion-Restaurant/precache-manifest.47dbe5972517da8ba4ddc8a9ecf8b9d0.js"
 );
 
 self.addEventListener('message', (event) => {
